@@ -1,0 +1,15 @@
+file:
+  upload-dir: G:/java/javaweb/ideaProduct/campus_secondhand2/src/main/resources/img  # 指定绝对路径
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  web:
+    resources:
+      static-locations:
+        - classpath:/static/
+        - classpath:/public/
+        - file:${file.upload-dir}/  # 允许访问该目录下的静态资源
